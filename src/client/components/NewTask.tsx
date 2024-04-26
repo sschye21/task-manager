@@ -1,30 +1,29 @@
 import { useState } from 'react';
-import { taskCreation } from '../services/task.service';
-import Modal from './Modal';
+import Modal from './Modal.js';
 
-const NewTask = () => {
+const NewTask = (props: any) => {
+
+    const { 
+        name, 
+        setName, 
+        description, 
+        setDescription, 
+        dueDate, 
+        setDueDate, 
+        priority, 
+        setPriority,
+        createNewTask
+    } = props;
 
     const [open, setOpenModal] = useState(false);
-    const [name, setName] = useState('');
-    const [description, setDescription] = useState('');
-    const [dueDate, setDueDate] = useState('');
-    const [priority, setPriority] = useState('');
 
     const openModal = () => setOpenModal(true);
-
-    console.log(dueDate)
-
-    const createNewTask = () => {
-        taskCreation({name, description, dueDate, priority})
-        .then(response => {
-            console.log(response?.data)
-        })
-    }
+    const closeModal = () => setOpenModal(false);
 
     return (
         <>
             <button
-                className="bg-green-400 rounded-md p-4"
+                className="bg-green-400 rounded-md p-4 font-bold"
                 type="button"
                 onClick={openModal}
             >
@@ -32,8 +31,7 @@ const NewTask = () => {
             </button>
             {open &&
                 <Modal 
-                    open={open}
-                    setOpen={setOpenModal}
+                    closeModal={closeModal}
                     name={name}
                     setName={setName}
                     description={description}
