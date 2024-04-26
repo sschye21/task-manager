@@ -13,5 +13,5 @@ export const getAllTasks = (search: string) => {
 }
 
 export const editTask = ({name, description, dueDate, priority, id}: EditTaskArgs) => {
-    return axiosWrapper('patch', `${BASE_URL}${ROUTES.edit}${id}`, { name, description, dueDate, priority })
+    return axiosWrapper('patch', `${BASE_URL}${ROUTES.edit}/${id}`, { name, description, dueDate, priority })
 }

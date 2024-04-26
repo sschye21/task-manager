@@ -1,1 +1,1 @@
-export const BASE_URL = '/tasks/v1';
+export const BASE_URL = '/task-manager/v1';

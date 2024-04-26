@@ -47,7 +47,7 @@ const Task = (props: any) => {
             </p>
             <div className="flex flex-row justify-between items-end">
                 <div className="pt-4">Created On: {createdDate}</div>
-                <button className="bg-blue-300 rounded-md p-2 px-4" onClick={openEditModal}>Edit</button>
+                <button className="bg-blue-300 rounded-md p-2 px-4" onClick={openEditModal}>Confirm Edit</button>
             </div>
             
             {open &&

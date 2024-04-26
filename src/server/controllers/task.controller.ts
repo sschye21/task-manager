@@ -40,7 +40,13 @@ export const TaskController = {
         
         try {
             await TaskService.updateTask({name, description, dueDate, priority, id});
-            res.status(200).send("Task updated successfully");
+            res.status(200).json({
+                message: "Task updated successfully",
+                task: {
+                    name,
+                    dueDate
+                }
+            })
         } catch (error) {
             res.status(500).send("Error updating task");
         }
