@@ -17,4 +17,17 @@ export const SQL_STATEMENTS = {
             dueDate = COALESCE($3, dueDate),
             status = COALESCE($4, status)
         WHERE id = $5`,
+    login: `
+    `,
+    register: `
+        INSERT INTO users (id, username, password)
+        VALUES ($1, $2, $3)
+    `,
+    updateUser: `
+        UPDATE users
+        SET
+            username = COALESCE($1, username)
+            password = COALESCE($2, password)
+        WHERE id = $3
+    `
 }

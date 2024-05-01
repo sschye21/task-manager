@@ -7,3 +7,9 @@ CREATE TABLE IF NOT EXISTS tasks (
     createDate DATE NOT NULL,
     status VARCHAR(255) NOT NULL
 );
+
+CREATE TABLE IF NOT EXISTS users (
+    user_id VARCHAR(255) PRIMARY KEY,
+    username VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL
+)
