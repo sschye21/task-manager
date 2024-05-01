@@ -1,20 +1,33 @@
-BACKEND TASKS / API Contract:
+## SCOPE:
 
-1. POST /new/v1 -> user should be able to create a new task
-    req: body: { name, description, dueDate }, params: null
-    res: 200 Status OK
+# User
+- User Account Creation
+- User account edit
+- User Account Delete
+- User Account change password
 
-2. GET /tasks/v1/:name/:limit -> user should be able to view all tasks created in a list view, showing all the following details
-    req: body: null, params: { name, limit }
-    res: { name, description, dueDate, createDate, status: { notUrgent, dueSoon, overDue } } & 200 Status OK
+# Tasks
+- Create task
+- Edit Task properties
+- Delete Task
 
-3. PATCH /tasks/v1/:id -> user should be able to edit task name, description and due date
-    req: { name, description, dueDate, priority }, params: { id }
-    res: 200 Status OK
+# Task
+- Name
+- Due Date
+- Location
+- Platform
+- Delegate
+- Status
+- Priority
+- Description (Only can be seen when viewing the individual task)
 
-FRONTEND TASKS
-1. Implement task creation
-2. implement list view
-3. edit button of each task
-4. implement search bar
-5. filtering of search bar
+# Calendar
+- Calendar that displays tasks
+- Can move around that changes date
+- 
+
+# Navbar
+- Add new instance -> Calendar, Kanban
+- Account Profile
+
+
