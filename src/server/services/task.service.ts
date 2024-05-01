@@ -1,5 +1,5 @@
 import pool from "../config/db.js";
-import { SQL_STATEMENTS } from "../data-layer/sql-statements.js";
+import { SQL_STATEMENTS } from "../models/sql-statements.js";
 import { NewTaskArgs } from "../utils/types.js";
 
 export const TaskService = {
